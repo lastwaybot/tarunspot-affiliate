@@ -4,8 +4,8 @@ export default function ProductCard({
   name, 
   image, 
   link, 
-  price, 
-  originalPrice, 
+  price = null, 
+  originalPrice = null, 
   rating = 0, 
   reviews = 0,
   isHotDeal = false,
@@ -86,8 +86,11 @@ export default function ProductCard({
             {price && (
               <span className="text-lg font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">₹{price.toLocaleString()}</span>
             )}
-            {originalPrice && originalPrice > price && (
+            {originalPrice && originalPrice > (price || 0) && (
               <span className="text-sm text-gray-400 line-through">₹{originalPrice.toLocaleString()}</span>
+            )}
+            {!price && (
+              <span className="text-sm text-gray-500">Contact for price</span>
             )}
           </div>
 
