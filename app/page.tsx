@@ -6,8 +6,8 @@ import ProductCard from '@/components/ProductCard';
 import ProductFilters from '@/components/ProductFilters';
 
 export default function Home() {
-  const [products, setProducts] = useState([]);
-  const [filters, setFilters] = useState([]);
+  const [products, setProducts] = useState<any[]>([]);
+  const [filters, setFilters] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
