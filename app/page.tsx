@@ -29,7 +29,7 @@ export default function Home() {
     fetchData();
   }, []);
 
-  const handleFilterChange = useCallback(async (newFilters) => {
+  const handleFilterChange = useCallback(async (newFilters: Record<string, string[]>) => {
     setLoading(true);
     try {
       const filteredProducts = await getProductsByFilters(newFilters);
