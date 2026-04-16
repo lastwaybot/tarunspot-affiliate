@@ -23,8 +23,26 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  -webkit-user-select-text: auto !important;
+  -moz-user-select: text !important;
+  user-select: text !important;
+}
+
+p, h1, h2, h3, h4, h5, h6, span, a, button, li {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 /* Studio Lighting Effects */
 ::selection {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background-color: #4f46e5;
+  background: #4f46e5;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #4f46e5;
+  background: #4f46e5;
   color: white;
 }
