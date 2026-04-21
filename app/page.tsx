@@ -61,30 +61,58 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100">
+    <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         {/* Hero Section */}
-        <div className="mb-16">
-          <div className="space-y-4 mb-8">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-              Premium <span className="text-teal-600 font-extrabold" style={{color: '#0d9488'}}>Curated</span> Products
+        <div className="mb-16 relative">
+          {/* Decorative blobs */}
+
+
+          <div className="relative space-y-6 mb-8">
+            {/* Niche tagline badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-700 font-semibold text-sm">
+              <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+              Trusted picks. No fake reviews.
+            </div>
+
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight tracking-tight">
+              Best Deals on{' '}
+              <span className="text-purple-600">
+                Tech &amp; Gadgets
+              </span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl leading-relaxed">
-              Discover handpicked, high-quality products at the best prices. Your trusted marketplace for everything you need.
+            <p className="text-lg sm:text-xl text-gray-500 max-w-2xl leading-relaxed">
+              Find the best products with honest reviews and smart recommendations. Save money and choose the right product easily.
             </p>
           </div>
-          <div className="flex flex-wrap gap-4">
-            <button className="px-8 py-3 bg-gradient-to-r from-teal-600 to-green-600 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300">
+
+          <div className="flex flex-wrap gap-4 mb-10">
+            <a
+              href="#products"
+              className="px-8 py-3 font-semibold text-white rounded-lg transition-opacity duration-200 hover:opacity-90"
+              style={{ background: '#9333ea' }}
+            >
+              View Best Deals
+            </a>
+            <a
+              href="#products"
+              className="px-8 py-3 font-semibold text-gray-700 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 transition-colors duration-200"
+            >
               Explore Products
-            </button>
-            <button className="px-8 py-3 bg-white text-gray-900 font-semibold rounded-lg border-2 border-gray-200 hover:border-gray-400 transition-all duration-300">
-              Learn More
-            </button>
+            </a>
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="flex items-center gap-2 text-gray-400 text-sm">
+            <svg className="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+            Scroll to explore
           </div>
         </div>
 
         {/* Products Section with Filters */}
-        <div>
+        <div id="products">
           <div className="mb-8">
             <div className="relative">
               <input
@@ -92,7 +120,7 @@ export default function Home() {
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => handleSearch(e.target.value)}
-                className="w-full px-6 py-3 border-2 border-indigo-200 rounded-lg focus:outline-none focus:border-indigo-600 text-gray-900 placeholder-gray-500"
+                className="w-full px-6 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-600 text-gray-900 placeholder-gray-500"
               />
               <svg
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
@@ -130,7 +158,7 @@ export default function Home() {
                   </div>
                 </div>
               ) : products.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
                   {products.map((product) => (
                     <ProductCard
                       key={product._id}

@@ -24,36 +24,33 @@ export default function ProductCard({
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="group block cursor-pointer rounded-2xl overflow-hidden bg-white border-2 border-indigo-100 shadow-md hover:shadow-2xl hover:shadow-indigo-500/20 hover:border-indigo-300 transition-all duration-300 hover:-translate-y-2"
+        className="group block cursor-pointer rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all duration-200"
       >
         {/* Image Container with Badges */}
-        <div className="relative overflow-hidden bg-slate-100 h-64 sm:h-56">
+        <div className="relative overflow-hidden bg-white h-48 sm:h-44 p-4 flex items-center justify-center">
           <img
             src={imageUrl || fallbackImage}
             alt={name}
             onError={(e) => {
               e.target.src = fallbackImage
             }}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+            className="max-w-full max-h-full object-contain"
           />
-          
-          {/* Studio Lighting Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/0 via-transparent to-white/0 group-hover:from-black/10 transition-all duration-300"></div>
           
           {/* Badges */}
           <div className="absolute top-3 left-3 flex gap-2 flex-wrap">
             {isHotDeal && (
-              <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded text-xs font-bold shadow-lg shadow-red-500/50">
+              <div className="bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
                 🔥 HOT DEAL
               </div>
             )}
             {bestSeller && (
-              <div className="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-2 py-1 rounded text-xs font-bold shadow-lg shadow-amber-500/50">
+              <div className="bg-amber-500 text-white px-2 py-1 rounded text-xs font-bold">
                 👑 BEST SELLER
               </div>
             )}
             {discountPercent > 0 && (
-              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-2 py-1 rounded text-xs font-bold shadow-lg shadow-indigo-500/50">
+              <div className="bg-purple-600 text-white px-2 py-1 rounded text-xs font-bold">
                 -{discountPercent}%
               </div>
             )}
@@ -66,8 +63,8 @@ export default function ProductCard({
         </div>
 
         {/* Content */}
-        <div className="p-4 sm:p-5">
-          <h3 className="text-base sm:text-lg font-semibold text-gray-900 truncate group-hover:text-indigo-600 transition-colors line-clamp-2">
+        <div className="p-4">
+          <h3 className="text-sm sm:text-base font-semibold text-gray-900 group-hover:text-purple-600 transition-colors line-clamp-2">
             {name}
           </h3>
           
@@ -84,7 +81,7 @@ export default function ProductCard({
           {/* Pricing */}
           <div className="mt-3 flex items-baseline gap-2">
             {price && (
-              <span className="text-lg font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">₹{price.toLocaleString()}</span>
+              <span className="text-base font-bold text-purple-600">₹{price.toLocaleString()}</span>
             )}
             {originalPrice && originalPrice > (price || 0) && (
               <span className="text-sm text-gray-400 line-through">₹{originalPrice.toLocaleString()}</span>
@@ -95,7 +92,7 @@ export default function ProductCard({
           </div>
 
           {/* CTA Button */}
-          <button className="mt-4 w-full py-2 px-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-orange-500 text-white font-medium rounded-lg hover:shadow-xl hover:shadow-indigo-600/40 transition-all duration-300 text-sm font-semibold">
+          <button className="mt-3 w-full py-2 px-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors duration-200 text-sm">
             View Product
           </button>
         </div>
