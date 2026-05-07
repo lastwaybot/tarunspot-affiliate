@@ -1,39 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TarunSpot Affiliate
 
-## Getting Started
+A curated affiliate products website focused on helping people quickly discover useful tech and gadget deals with cleaner browsing and fewer fake-review style listings.
 
-First, run the development server:
+## Why this project was made
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Many shopping pages are noisy, repetitive, and hard to trust. This project was created to:
+- show handpicked product recommendations in one place,
+- make deal discovery faster with search and filters,
+- give users a simple path to compare and open product links.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How it can be used in day-to-day life
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can use TarunSpot Affiliate to:
+- quickly find gadgets for work, study, travel, or home use,
+- filter products by category/preferences before buying,
+- discover current deals without browsing multiple websites,
+- shortlist options and open the final affiliate listing when ready.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Minimal setup
 
-## Learn More
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the app:
+   ```bash
+   npm run dev
+   ```
+3. Open `http://localhost:3000`.
 
-To learn more about Next.js, take a look at the following resources:
+## Tech stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- React
+- Tailwind CSS
+- Sanity (content source)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Screenshots
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 <img width="1900" height="910" alt="Screenshot 2026-04-23 224659" src="https://github.com/user-attachments/assets/ce4b09e2-8ad7-46c3-9497-beaf6cc23e06" />
 <img width="1900" height="913" alt="Screenshot 2026-04-23 224648" src="https://github.com/user-attachments/assets/737ad1bc-de7f-4d9f-9574-90dc6b285c83" />
 <img width="1892" height="915" alt="Screenshot 2026-04-23 224636" src="https://github.com/user-attachments/assets/3b52efe3-f405-434f-ab99-229865f78135" />
